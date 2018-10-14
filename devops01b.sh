@@ -3,6 +3,10 @@
 : ' get information about computer
 disk cpu memory network
 '
+if [ $# -eq 0 ];
+then
+   echo "usage: getinfo [-disk] [-cpu] [-ram] [-network] [-all]"
+fi
 for arg in "$@"
 do
    case $arg in
